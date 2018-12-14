@@ -19202,6 +19202,7 @@ var tstructIncrementResult = thrift.NewTStruct("increment_result", []thrift.TFie
 })
 
 func (*IncrementResult) GetTStruct() thrift.TStruct { return tstructIncrementResult }
+
 func NewIncrementResult() *IncrementResult {
 	output := &IncrementResult{}
 	{

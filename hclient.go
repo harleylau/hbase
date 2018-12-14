@@ -7,7 +7,7 @@ import (
 	"github.com/J-J-J/hbase/thrift"
 )
 
-//  HClient is a wrap of hbase client
+// HClient is a wrap of hbase client
 type HClient struct {
 	addr            string
 	Protocol        int
@@ -17,7 +17,7 @@ type HClient struct {
 	hbase           *Hbase.HbaseClient
 }
 
-//  NewTCPClient return a base tcp client instance
+// NewTCPClient return a base tcp client instance
 func NewTCPClient(rawaddr string, buffered bool) (client *HClient, err error) {
 	tcpAddr, err := net.ResolveTCPAddr("tcp", rawaddr)
 	if err != nil {
@@ -27,7 +27,7 @@ func NewTCPClient(rawaddr string, buffered bool) (client *HClient, err error) {
 	return newClient(tcpAddr.String(), TBinaryProtocol, trans)
 }
 
-//  newClient create a new hbase client
+// newClient create a new hbase client
 func newClient(addr string, protocol int, trans thrift.TTransport) (*HClient, error) {
 	client := &HClient{
 		addr:     addr,
@@ -44,7 +44,7 @@ func newClient(addr string, protocol int, trans thrift.TTransport) (*HClient, er
 	return client, nil
 }
 
-//  Open connection
+// Open connection
 func (client *HClient) Open() error {
 	if client.state == stateDefault {
 		if err := client.Trans.Open(); err != nil {
@@ -55,7 +55,7 @@ func (client *HClient) Open() error {
 	return nil
 }
 
-//  Close connection
+// Close connection
 func (client *HClient) Close() error {
 	if client.state == stateOpen {
 		if err := client.Trans.Close(); err != nil {
