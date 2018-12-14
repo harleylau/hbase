@@ -20,8 +20,7 @@ const (
 
 // transport
 const (
-	TFramedTransport = iota
-	TSocket
+	TSocket = iota
 )
 
 func newProtocolFactory(protocol int) (thrift.TProtocolFactory, error) {
