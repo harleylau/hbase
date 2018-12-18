@@ -106,7 +106,7 @@ func init() {
 
 type TTransportException interface {
 	TException
-	TypeId() int
+	TypeID() int
 }
 
 const (
@@ -122,7 +122,7 @@ type tTransportException struct {
 	message string
 }
 
-func (p *tTransportException) TypeId() int {
+func (p *tTransportException) TypeID() int {
 	return p.typeId
 }
 

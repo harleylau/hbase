@@ -6,7 +6,7 @@ package thrift
  */
 type TMessage interface {
 	Name() string
-	TypeId() TMessageType
+	TypeID() TMessageType
 	SeqId() int
 	Equals(other TMessage) bool
 }
@@ -28,7 +28,7 @@ func (p *tMessage) Name() string {
 	return p.name
 }
 
-func (p *tMessage) TypeId() TMessageType {
+func (p *tMessage) TypeID() TMessageType {
 	return p.typeId
 }
 
@@ -41,7 +41,7 @@ func (p *tMessage) String() string {
 }
 
 func (p *tMessage) Equals(other TMessage) bool {
-	return p.name == other.Name() && p.typeId == other.TypeId() && p.seqid == other.SeqId()
+	return p.name == other.Name() && p.typeId == other.TypeID() && p.seqid == other.SeqId()
 }
 
 var EMPTY_MESSAGE TMessage

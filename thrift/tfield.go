@@ -4,60 +4,49 @@ import (
 	"sort"
 )
 
-/**
- * Helper class that encapsulates field metadata.
- *
- */
+// TField Helper class that encapsulates field metadata.
 type TField interface {
 	Name() string
-	TypeId() TType
-	Id() int
+	TypeID() TType
+	ID() int
 	String() string
 }
 
 type tField struct {
 	name   string
-	typeId TType
+	typeID TType
 	id     int
 }
 
-func NewTFieldDefault() TField {
-	return ANONYMOUS_FIELD
+// ANONYMOUS FIELD
+var (
+	ANONYMOUSFIELD TField
+)
+
+func init() {
+	ANONYMOUSFIELD = NewTField("", STOP, 0)
 }
 
+// NewTField NewTField
 func NewTField(n string, t TType, i int) TField {
-	return &tField{name: n, typeId: t, id: i}
+	return &tField{name: n, typeID: t, id: i}
 }
 
 func (p *tField) Name() string {
-	if p == nil {
-		return ""
-	}
 	return p.name
 }
 
-func (p *tField) TypeId() TType {
-	if p == nil {
-		return TType(VOID)
-	}
-	return p.typeId
+func (p *tField) TypeID() TType {
+	return p.typeID
 }
 
-func (p *tField) Id() int {
-	if p == nil {
-		return -1
-	}
+func (p *tField) ID() int {
 	return p.id
 }
 
 func (p *tField) String() string {
-	if p == nil {
-		return "<nil>"
-	}
-	return "<TField name:'" + p.name + "' type:" + string(p.typeId) + " field-id:" + string(p.id) + ">"
+	return "<TField name:'" + p.name + "' type:" + string(p.typeID) + " field-id:" + string(p.id) + ">"
 }
-
-var ANONYMOUS_FIELD TField
 
 type tFieldArray []TField
 
@@ -66,17 +55,18 @@ func (p tFieldArray) Len() int {
 }
 
 func (p tFieldArray) Less(i, j int) bool {
-	return p[i].Id() < p[j].Id()
+	return p[i].ID() < p[j].ID()
 }
 
 func (p tFieldArray) Swap(i, j int) {
 	p[i], p[j] = p[j], p[i]
 }
 
+// TFieldContainer TFieldContainer
 type TFieldContainer interface {
-	FieldNameFromFieldId(id int) string
-	FieldIdFromFieldName(name string) int
-	FieldFromFieldId(id int) TField
+	FieldNameFromFieldID(id int) string
+	FieldIDFromFieldName(name string) int
+	FieldFromFieldID(id int) TField
 	FieldFromFieldName(name string) TField
 	At(i int) TField
 }
@@ -87,13 +77,16 @@ type tFieldContainer struct {
 	idToFieldMap   map[int]TField
 }
 
+// NewTFieldContainer NewTFieldContainer
 func NewTFieldContainer(fields []TField) TFieldContainer {
-	sortedFields := make([]TField, len(fields))
-	nameToFieldMap := make(map[string]TField)
-	idToFieldMap := make(map[int]TField)
+	var (
+		sortedFields   = make([]TField, len(fields))
+		nameToFieldMap = make(map[string]TField)
+		idToFieldMap   = make(map[int]TField)
+	)
 	for i, field := range fields {
 		sortedFields[i] = field
-		idToFieldMap[field.Id()] = field
+		idToFieldMap[field.ID()] = field
 		if field.Name() != "" {
 			nameToFieldMap[field.Name()] = field
 		}
@@ -106,32 +99,32 @@ func NewTFieldContainer(fields []TField) TFieldContainer {
 	}
 }
 
-func (p *tFieldContainer) FieldNameFromFieldId(id int) string {
+func (p *tFieldContainer) FieldNameFromFieldID(id int) string {
 	if field, ok := p.idToFieldMap[id]; ok {
 		return field.Name()
 	}
 	return ""
 }
 
-func (p *tFieldContainer) FieldIdFromFieldName(name string) int {
+func (p *tFieldContainer) FieldIDFromFieldName(name string) int {
 	if field, ok := p.nameToFieldMap[name]; ok {
-		return field.Id()
+		return field.ID()
 	}
 	return -1
 }
 
-func (p *tFieldContainer) FieldFromFieldId(id int) TField {
+func (p *tFieldContainer) FieldFromFieldID(id int) TField {
 	if field, ok := p.idToFieldMap[id]; ok {
 		return field
 	}
-	return ANONYMOUS_FIELD
+	return ANONYMOUSFIELD
 }
 
 func (p *tFieldContainer) FieldFromFieldName(name string) TField {
 	if field, ok := p.nameToFieldMap[name]; ok {
 		return field
 	}
-	return ANONYMOUS_FIELD
+	return ANONYMOUSFIELD
 }
 
 func (p *tFieldContainer) Len() int {
@@ -139,7 +132,7 @@ func (p *tFieldContainer) Len() int {
 }
 
 func (p *tFieldContainer) At(i int) TField {
-	return p.FieldFromFieldId(i)
+	return p.FieldFromFieldID(i)
 }
 
 func (p *tFieldContainer) iterate(c chan<- TField) {
@@ -147,8 +140,4 @@ func (p *tFieldContainer) iterate(c chan<- TField) {
 		c <- v
 	}
 	close(c)
-}
-
-func init() {
-	ANONYMOUS_FIELD = NewTField("", STOP, 0)
 }

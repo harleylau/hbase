@@ -5711,8 +5711,8 @@ func (p *EnableTableArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExce
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructEnableTableArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructEnableTableArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructEnableTableArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructEnableTableArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -5850,8 +5850,8 @@ func (p *EnableTableResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolEx
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructEnableTableResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructEnableTableResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructEnableTableResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructEnableTableResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -5991,8 +5991,8 @@ func (p *DisableTableArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExc
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructDisableTableArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructDisableTableArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructDisableTableArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructDisableTableArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -6130,8 +6130,8 @@ func (p *DisableTableResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolE
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructDisableTableResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructDisableTableResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructDisableTableResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructDisableTableResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -6271,8 +6271,8 @@ func (p *IsTableEnabledArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolE
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructIsTableEnabledArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructIsTableEnabledArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructIsTableEnabledArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructIsTableEnabledArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -6413,8 +6413,8 @@ func (p *IsTableEnabledResult) Read(iprot thrift.TProtocol) (err thrift.TProtoco
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructIsTableEnabledResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructIsTableEnabledResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructIsTableEnabledResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructIsTableEnabledResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -6599,8 +6599,8 @@ func (p *CompactArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExceptio
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructCompactArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructCompactArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructCompactArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructCompactArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -6738,8 +6738,8 @@ func (p *CompactResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolExcept
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructCompactResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructCompactResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructCompactResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructCompactResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -6879,8 +6879,8 @@ func (p *MajorCompactArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExc
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructMajorCompactArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructMajorCompactArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructMajorCompactArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructMajorCompactArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -7018,8 +7018,8 @@ func (p *MajorCompactResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolE
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructMajorCompactResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructMajorCompactResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructMajorCompactResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructMajorCompactResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -7152,8 +7152,8 @@ func (p *GetTableNamesArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolEx
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetTableNamesArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetTableNamesArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetTableNamesArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetTableNamesArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -7247,8 +7247,8 @@ func (p *GetTableNamesResult) Read(iprot thrift.TProtocol) (err thrift.TProtocol
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetTableNamesResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetTableNamesResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetTableNamesResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetTableNamesResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -7457,8 +7457,8 @@ func (p *GetColumnDescriptorsArgs) Read(iprot thrift.TProtocol) (err thrift.TPro
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetColumnDescriptorsArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetColumnDescriptorsArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetColumnDescriptorsArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetColumnDescriptorsArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -7601,8 +7601,8 @@ func (p *GetColumnDescriptorsResult) Read(iprot thrift.TProtocol) (err thrift.TP
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetColumnDescriptorsResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetColumnDescriptorsResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetColumnDescriptorsResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetColumnDescriptorsResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -7820,8 +7820,8 @@ func (p *GetTableRegionsArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocol
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetTableRegionsArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetTableRegionsArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetTableRegionsArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetTableRegionsArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -7962,8 +7962,8 @@ func (p *GetTableRegionsResult) Read(iprot thrift.TProtocol) (err thrift.TProtoc
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetTableRegionsResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetTableRegionsResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetTableRegionsResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetTableRegionsResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -8175,8 +8175,8 @@ func (p *CreateTableArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExce
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructCreateTableArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructCreateTableArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructCreateTableArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructCreateTableArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -8389,8 +8389,8 @@ func (p *CreateTableResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolEx
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructCreateTableResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructCreateTableResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructCreateTableResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructCreateTableResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -8622,8 +8622,8 @@ func (p *DeleteTableArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExce
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructDeleteTableArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructDeleteTableArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructDeleteTableArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructDeleteTableArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -8761,8 +8761,8 @@ func (p *DeleteTableResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolEx
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructDeleteTableResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructDeleteTableResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructDeleteTableResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructDeleteTableResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -8911,8 +8911,8 @@ func (p *GetArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolException) {
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -9223,8 +9223,8 @@ func (p *GetResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolException)
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -9445,8 +9445,8 @@ func (p *GetVerArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolException
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetVerArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetVerArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetVerArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetVerArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -9801,8 +9801,8 @@ func (p *GetVerResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolExcepti
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetVerResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetVerResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetVerResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetVerResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -10026,8 +10026,8 @@ func (p *GetVerTsArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExcepti
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetVerTsArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetVerTsArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetVerTsArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetVerTsArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -10426,8 +10426,8 @@ func (p *GetVerTsResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolExcep
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetVerTsResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetVerTsResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetVerTsResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetVerTsResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -10642,8 +10642,8 @@ func (p *GetRowArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolException
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRowArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRowArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRowArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRowArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -10908,8 +10908,8 @@ func (p *GetRowResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolExcepti
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRowResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRowResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRowResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRowResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -11127,8 +11127,8 @@ func (p *GetRowWithColumnsArgs) Read(iprot thrift.TProtocol) (err thrift.TProtoc
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRowWithColumnsArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRowWithColumnsArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRowWithColumnsArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRowWithColumnsArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -11462,8 +11462,8 @@ func (p *GetRowWithColumnsResult) Read(iprot thrift.TProtocol) (err thrift.TProt
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRowWithColumnsResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRowWithColumnsResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRowWithColumnsResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRowWithColumnsResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -11681,8 +11681,8 @@ func (p *GetRowTsArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExcepti
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRowTsArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRowTsArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRowTsArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRowTsArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -11991,8 +11991,8 @@ func (p *GetRowTsResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolExcep
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRowTsResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRowTsResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRowTsResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRowTsResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -12213,8 +12213,8 @@ func (p *GetRowWithColumnsTsArgs) Read(iprot thrift.TProtocol) (err thrift.TProt
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRowWithColumnsTsArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRowWithColumnsTsArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRowWithColumnsTsArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRowWithColumnsTsArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -12592,8 +12592,8 @@ func (p *GetRowWithColumnsTsResult) Read(iprot thrift.TProtocol) (err thrift.TPr
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRowWithColumnsTsResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRowWithColumnsTsResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRowWithColumnsTsResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRowWithColumnsTsResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -12808,8 +12808,8 @@ func (p *GetRowsArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExceptio
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRowsArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRowsArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRowsArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRowsArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -13097,8 +13097,8 @@ func (p *GetRowsResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolExcept
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRowsResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRowsResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRowsResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRowsResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -13316,8 +13316,8 @@ func (p *GetRowsWithColumnsArgs) Read(iprot thrift.TProtocol) (err thrift.TProto
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRowsWithColumnsArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRowsWithColumnsArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRowsWithColumnsArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRowsWithColumnsArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -13674,8 +13674,8 @@ func (p *GetRowsWithColumnsResult) Read(iprot thrift.TProtocol) (err thrift.TPro
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRowsWithColumnsResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRowsWithColumnsResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRowsWithColumnsResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRowsWithColumnsResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -13893,8 +13893,8 @@ func (p *GetRowsTsArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExcept
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRowsTsArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRowsTsArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRowsTsArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRowsTsArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -14226,8 +14226,8 @@ func (p *GetRowsTsResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolExce
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRowsTsResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRowsTsResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRowsTsResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRowsTsResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -14448,8 +14448,8 @@ func (p *GetRowsWithColumnsTsArgs) Read(iprot thrift.TProtocol) (err thrift.TPro
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRowsWithColumnsTsArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRowsWithColumnsTsArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRowsWithColumnsTsArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRowsWithColumnsTsArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -14852,8 +14852,8 @@ func (p *GetRowsWithColumnsTsResult) Read(iprot thrift.TProtocol) (err thrift.TP
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRowsWithColumnsTsResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRowsWithColumnsTsResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRowsWithColumnsTsResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRowsWithColumnsTsResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -15071,8 +15071,8 @@ func (p *MutateRowArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExcept
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructMutateRowArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructMutateRowArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructMutateRowArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructMutateRowArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -15406,8 +15406,8 @@ func (p *MutateRowResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolExce
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructMutateRowResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructMutateRowResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructMutateRowResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructMutateRowResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -15605,8 +15605,8 @@ func (p *MutateRowTsArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExce
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructMutateRowTsArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructMutateRowTsArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructMutateRowTsArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructMutateRowTsArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -15984,8 +15984,8 @@ func (p *MutateRowTsResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolEx
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructMutateRowTsResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructMutateRowTsResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructMutateRowTsResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructMutateRowTsResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -16177,8 +16177,8 @@ func (p *MutateRowsArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExcep
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructMutateRowsArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructMutateRowsArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructMutateRowsArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructMutateRowsArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -16466,8 +16466,8 @@ func (p *MutateRowsResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolExc
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructMutateRowsResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructMutateRowsResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructMutateRowsResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructMutateRowsResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -16662,8 +16662,8 @@ func (p *MutateRowsTsArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExc
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructMutateRowsTsArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructMutateRowsTsArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructMutateRowsTsArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructMutateRowsTsArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -16995,8 +16995,8 @@ func (p *MutateRowsTsResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolE
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructMutateRowsTsResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructMutateRowsTsResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructMutateRowsTsResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructMutateRowsTsResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -17191,8 +17191,8 @@ func (p *AtomicIncrementArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocol
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructAtomicIncrementArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructAtomicIncrementArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructAtomicIncrementArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructAtomicIncrementArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -17472,8 +17472,8 @@ func (p *AtomicIncrementResult) Read(iprot thrift.TProtocol) (err thrift.TProtoc
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructAtomicIncrementResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructAtomicIncrementResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructAtomicIncrementResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructAtomicIncrementResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -17712,8 +17712,8 @@ func (p *DeleteAllArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExcept
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructDeleteAllArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructDeleteAllArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructDeleteAllArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructDeleteAllArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -18021,8 +18021,8 @@ func (p *DeleteAllResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolExce
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructDeleteAllResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructDeleteAllResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructDeleteAllResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructDeleteAllResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -18174,8 +18174,8 @@ func (p *DeleteAllTsArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExce
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructDeleteAllTsArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructDeleteAllTsArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructDeleteAllTsArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructDeleteAllTsArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -18527,8 +18527,8 @@ func (p *DeleteAllTsResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolEx
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructDeleteAllTsResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructDeleteAllTsResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructDeleteAllTsResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructDeleteAllTsResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -18674,8 +18674,8 @@ func (p *DeleteAllRowArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExc
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructDeleteAllRowArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructDeleteAllRowArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructDeleteAllRowArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructDeleteAllRowArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -18937,8 +18937,8 @@ func (p *DeleteAllRowResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolE
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructDeleteAllRowResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructDeleteAllRowResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructDeleteAllRowResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructDeleteAllRowResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -19078,8 +19078,8 @@ func (p *IncrementArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExcept
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructIncrementArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructIncrementArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructIncrementArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructIncrementArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -19218,8 +19218,8 @@ func (p *IncrementResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolExce
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructIncrementResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructIncrementResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructIncrementResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructIncrementResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -19359,8 +19359,8 @@ func (p *IncrementRowsArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolEx
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructIncrementRowsArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructIncrementRowsArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructIncrementRowsArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructIncrementRowsArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -19521,8 +19521,8 @@ func (p *IncrementRowsResult) Read(iprot thrift.TProtocol) (err thrift.TProtocol
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructIncrementRowsResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructIncrementRowsResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructIncrementRowsResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructIncrementRowsResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -19671,8 +19671,8 @@ func (p *DeleteAllRowTsArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolE
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructDeleteAllRowTsArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructDeleteAllRowTsArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructDeleteAllRowTsArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructDeleteAllRowTsArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -19978,8 +19978,8 @@ func (p *DeleteAllRowTsResult) Read(iprot thrift.TProtocol) (err thrift.TProtoco
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructDeleteAllRowTsResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructDeleteAllRowTsResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructDeleteAllRowTsResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructDeleteAllRowTsResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -20125,8 +20125,8 @@ func (p *ScannerOpenWithScanArgs) Read(iprot thrift.TProtocol) (err thrift.TProt
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructScannerOpenWithScanArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructScannerOpenWithScanArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructScannerOpenWithScanArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructScannerOpenWithScanArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -20391,8 +20391,8 @@ func (p *ScannerOpenWithScanResult) Read(iprot thrift.TProtocol) (err thrift.TPr
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructScannerOpenWithScanResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructScannerOpenWithScanResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructScannerOpenWithScanResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructScannerOpenWithScanResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -20588,8 +20588,8 @@ func (p *ScannerOpenArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExce
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructScannerOpenArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructScannerOpenArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructScannerOpenArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructScannerOpenArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -20923,8 +20923,8 @@ func (p *ScannerOpenResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolEx
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructScannerOpenResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructScannerOpenResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructScannerOpenResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructScannerOpenResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -21124,8 +21124,8 @@ func (p *ScannerOpenWithStopArgs) Read(iprot thrift.TProtocol) (err thrift.TProt
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructScannerOpenWithStopArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructScannerOpenWithStopArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructScannerOpenWithStopArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructScannerOpenWithStopArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -21505,8 +21505,8 @@ func (p *ScannerOpenWithStopResult) Read(iprot thrift.TProtocol) (err thrift.TPr
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructScannerOpenWithStopResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructScannerOpenWithStopResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructScannerOpenWithStopResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructScannerOpenWithStopResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -21699,8 +21699,8 @@ func (p *ScannerOpenWithPrefixArgs) Read(iprot thrift.TProtocol) (err thrift.TPr
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructScannerOpenWithPrefixArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructScannerOpenWithPrefixArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructScannerOpenWithPrefixArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructScannerOpenWithPrefixArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -22036,8 +22036,8 @@ func (p *ScannerOpenWithPrefixResult) Read(iprot thrift.TProtocol) (err thrift.T
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructScannerOpenWithPrefixResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructScannerOpenWithPrefixResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructScannerOpenWithPrefixResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructScannerOpenWithPrefixResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -22236,8 +22236,8 @@ func (p *ScannerOpenTsArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolEx
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructScannerOpenTsArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructScannerOpenTsArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructScannerOpenTsArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructScannerOpenTsArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -22615,8 +22615,8 @@ func (p *ScannerOpenTsResult) Read(iprot thrift.TProtocol) (err thrift.TProtocol
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructScannerOpenTsResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructScannerOpenTsResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructScannerOpenTsResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructScannerOpenTsResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -22819,8 +22819,8 @@ func (p *ScannerOpenWithStopTsArgs) Read(iprot thrift.TProtocol) (err thrift.TPr
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructScannerOpenWithStopTsArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructScannerOpenWithStopTsArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructScannerOpenWithStopTsArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructScannerOpenWithStopTsArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -23246,8 +23246,8 @@ func (p *ScannerOpenWithStopTsResult) Read(iprot thrift.TProtocol) (err thrift.T
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructScannerOpenWithStopTsResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructScannerOpenWithStopTsResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructScannerOpenWithStopTsResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructScannerOpenWithStopTsResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -23431,8 +23431,8 @@ func (p *ScannerGetArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExcep
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructScannerGetArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructScannerGetArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructScannerGetArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructScannerGetArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -23574,8 +23574,8 @@ func (p *ScannerGetResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolExc
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructScannerGetResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructScannerGetResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructScannerGetResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructScannerGetResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -23833,8 +23833,8 @@ func (p *ScannerGetListArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolE
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructScannerGetListArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructScannerGetListArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructScannerGetListArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructScannerGetListArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -24020,8 +24020,8 @@ func (p *ScannerGetListResult) Read(iprot thrift.TProtocol) (err thrift.TProtoco
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructScannerGetListResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructScannerGetListResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructScannerGetListResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructScannerGetListResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -24276,8 +24276,8 @@ func (p *ScannerCloseArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolExc
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructScannerCloseArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructScannerCloseArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructScannerCloseArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructScannerCloseArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -24416,8 +24416,8 @@ func (p *ScannerCloseResult) Read(iprot thrift.TProtocol) (err thrift.TProtocolE
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructScannerCloseResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructScannerCloseResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructScannerCloseResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructScannerCloseResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -24609,8 +24609,8 @@ func (p *GetRowOrBeforeArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolE
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRowOrBeforeArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRowOrBeforeArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRowOrBeforeArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRowOrBeforeArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -24843,8 +24843,8 @@ func (p *GetRowOrBeforeResult) Read(iprot thrift.TProtocol) (err thrift.TProtoco
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRowOrBeforeResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRowOrBeforeResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRowOrBeforeResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRowOrBeforeResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -25053,8 +25053,8 @@ func (p *GetRegionInfoArgs) Read(iprot thrift.TProtocol) (err thrift.TProtocolEx
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRegionInfoArgs.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRegionInfoArgs.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRegionInfoArgs.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRegionInfoArgs.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
@@ -25195,8 +25195,8 @@ func (p *GetRegionInfoResult) Read(iprot thrift.TProtocol) (err thrift.TProtocol
 	for {
 		fieldName, fieldTypeId, fieldId, err := iprot.ReadFieldBegin()
 		if fieldId < 0 {
-			fieldId = int16(tstructGetRegionInfoResult.FieldIdFromFieldName(fieldName))
-			fieldTypeId = tstructGetRegionInfoResult.FieldFromFieldName(fieldName).TypeId()
+			fieldId = int16(tstructGetRegionInfoResult.FieldIDFromFieldName(fieldName))
+			fieldTypeId = tstructGetRegionInfoResult.FieldFromFieldName(fieldName).TypeID()
 		}
 		if err != nil {
 			return thrift.NewTProtocolExceptionReadField(int(fieldId), fieldName, p.ThriftName(), err)
