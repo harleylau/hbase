@@ -7,15 +7,8 @@ import (
 	"strconv"
 )
 
-type Flusher interface {
-	Flush() (err error)
-}
-
-/**
- * Generic class that encapsulates the I/O layer. This is basically a thin
- * wrapper around the combined functionality of Java input/output streams.
- *
- */
+// TTransport Generic class that encapsulates the I/O layer. This is basically a thin
+// wrapper around the combined functionality of Java input/output streams.
 type TTransport interface {
 	/**
 	 * Queries whether the transport is open.
@@ -82,20 +75,16 @@ type TTransport interface {
 	Peek() bool
 }
 
-/**
- * Guarantees that all of len bytes are actually read off the transport.
- *
- * @param buf Array to read into
- * @param off Index to start reading at
- * @param len Maximum number of bytes to read
- * @return The number of bytes actually read, which must be equal to len
- * @return TTransportException if there was an error reading data
- */
+// ReadAllTransport Guarantees that all of len bytes are actually read off the transport.
+// @param buf Array to read into
+// @param off Index to start reading at
+// @param len Maximum number of bytes to read
+// @return The number of bytes actually read, which must be equal to len
+// @return TTransportException if there was an error reading data
 func ReadAllTransport(p TTransport, buf []byte) (n int, err error) {
-	ret := 0
 	size := len(buf)
 	for n < size {
-		ret, err = p.Read(buf[n:])
+		ret, err := p.Read(buf[n:])
 		if ret <= 0 {
 			if err != nil {
 				err = NewTTransportExceptionDefaultString("Cannot read. Remote side has closed. Tried to read " + strconv.Itoa(size) + " bytes, but only got " + strconv.Itoa(n) + " bytes.")
@@ -113,26 +102,6 @@ var (
 
 func init() {
 	LOGGER = log.New(os.Stderr, "", log.Ldate|log.Ltime|log.Lshortfile)
-}
-
-type TTransportFactory interface {
-	GetTransport(trans TTransport) TTransport
-}
-
-type tTransportFactory struct{}
-
-/**
- * Return a wrapped instance of the base Transport.
- *
- * @param trans The base transport
- * @return Wrapped Transport
- */
-func (p *tTransportFactory) GetTransport(trans TTransport) TTransport {
-	return trans
-}
-
-func NewTTransportFactory() TTransportFactory {
-	return &tTransportFactory{}
 }
 
 type TTransportException interface {

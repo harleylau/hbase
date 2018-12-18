@@ -7,8 +7,8 @@ import (
 	"strings"
 )
 
+// TBinaryProtocol TBinaryProtocol
 type TBinaryProtocol struct {
-	//TProtocolBase;
 	trans            TTransport
 	_StrictRead      bool
 	_StrictWrite     bool
@@ -16,39 +16,28 @@ type TBinaryProtocol struct {
 	_CheckReadLength bool
 }
 
-type TBinaryProtocolFactory struct {
-	_StrictRead  bool
-	_StrictWrite bool
-}
-
-func NewTBinaryProtocolTransport(t TTransport) *TBinaryProtocol {
-	return NewTBinaryProtocol(t, false, true)
-}
-
+// NewTBinaryProtocol NewTBinaryProtocol
 func NewTBinaryProtocol(t TTransport, strictRead, strictWrite bool) *TBinaryProtocol {
-	//return &TBinaryProtocol{TProtocolBase:TProtocolBase{trans:t}, _StrictRead:strictRead, _StrictWrite:strictWrite, _ReadLength:0, _CheckReadLength:false};
-	return &TBinaryProtocol{trans: t, _StrictRead: strictRead, _StrictWrite: strictWrite, _ReadLength: 0, _CheckReadLength: false}
+	return &TBinaryProtocol{
+		trans:            t,
+		_StrictRead:      strictRead,
+		_StrictWrite:     strictWrite,
+		_ReadLength:      0,
+		_CheckReadLength: false,
+	}
 }
 
-func NewTBinaryProtocolFactoryDefault() *TBinaryProtocolFactory {
-	return NewTBinaryProtocolFactory(false, true)
-}
-
-func NewTBinaryProtocolFactory(strictRead, strictWrite bool) *TBinaryProtocolFactory {
-	return &TBinaryProtocolFactory{_StrictRead: strictRead, _StrictWrite: strictWrite}
-}
-
-func (p *TBinaryProtocolFactory) GetProtocol(t TTransport) TProtocol {
+// GetProtocol GetProtocol
+func (p *TBinaryProtocol) GetProtocol(t TTransport) TProtocol {
 	return NewTBinaryProtocol(t, p._StrictRead, p._StrictWrite)
 }
 
-/**
- * Writing Methods
- */
+// // // // Write // // // //
 
-func (p *TBinaryProtocol) WriteMessageBegin(name string, typeId TMessageType, seqId int32) TProtocolException {
+// WriteMessageBegin WriteMessageBegin
+func (p *TBinaryProtocol) WriteMessageBegin(name string, typeID TMessageType, seqID int32) TProtocolException {
 	if p._StrictWrite {
-		version := uint32(VERSION_1) | uint32(typeId)
+		version := uint32(VERSION1) | uint32(typeID)
 		e := p.WriteI32(int32(version))
 		if e != nil {
 			return e
@@ -57,21 +46,19 @@ func (p *TBinaryProtocol) WriteMessageBegin(name string, typeId TMessageType, se
 		if e != nil {
 			return e
 		}
-		e = p.WriteI32(seqId)
-		return e
-	} else {
-		e := p.WriteString(name)
-		if e != nil {
-			return e
-		}
-		e = p.WriteByte(int8(typeId))
-		if e != nil {
-			return e
-		}
-		e = p.WriteI32(seqId)
+		e = p.WriteI32(seqID)
 		return e
 	}
-	return nil
+	e := p.WriteString(name)
+	if e != nil {
+		return e
+	}
+	e = p.WriteByte(int8(typeID))
+	if e != nil {
+		return e
+	}
+	e = p.WriteI32(seqID)
+	return e
 }
 
 func (p *TBinaryProtocol) WriteMessageEnd() TProtocolException {
@@ -86,8 +73,8 @@ func (p *TBinaryProtocol) WriteStructEnd() TProtocolException {
 	return nil
 }
 
-func (p *TBinaryProtocol) WriteFieldBegin(name string, typeId TType, id int16) TProtocolException {
-	e := p.WriteByte(typeId.ThriftTypeID())
+func (p *TBinaryProtocol) WriteFieldBegin(name string, typeID TType, id int16) TProtocolException {
+	e := p.WriteByte(typeID.ThriftTypeID())
 	if e != nil {
 		return e
 	}
@@ -218,48 +205,47 @@ func (p *TBinaryProtocol) WriteBinaryFromReader(reader io.Reader, size int) TPro
 	return NewTProtocolExceptionFromOsError(err)
 }
 
-/**
- * Reading methods
- */
+// // // // Read // // // // 
 
-func (p *TBinaryProtocol) ReadMessageBegin() (name string, typeId TMessageType, seqId int32, err TProtocolException) {
+// ReadMessageBegin ReadMessageBegin
+func (p *TBinaryProtocol) ReadMessageBegin() (name string, typeID TMessageType, seqID int32, err TProtocolException) {
 	size, e := p.ReadI32()
 	if e != nil {
-		return "", typeId, 0, NewTProtocolExceptionFromOsError(e)
+		return "", typeID, 0, NewTProtocolExceptionFromOsError(e)
 	}
 	if size < 0 {
-		typeId = TMessageType(size & 0x0ff)
-		version := int64(int64(size) & VERSION_MASK)
-		if version != VERSION_1 {
-			return name, typeId, seqId, NewTProtocolException(BAD_VERSION, "Bad version in ReadMessageBegin")
+		typeID = TMessageType(size & 0x0ff)
+		version := int64(int64(size) & VERSIONMASK)
+		if version != VERSION1 {
+			return name, typeID, seqID, NewTProtocolException(BAD_VERSION, "Bad version in ReadMessageBegin")
 		}
 		name, e = p.ReadString()
 		if e != nil {
-			return name, typeId, seqId, NewTProtocolExceptionFromOsError(e)
+			return name, typeID, seqID, NewTProtocolExceptionFromOsError(e)
 		}
-		seqId, e = p.ReadI32()
+		seqID, e = p.ReadI32()
 		if e != nil {
-			return name, typeId, seqId, NewTProtocolExceptionFromOsError(e)
+			return name, typeID, seqID, NewTProtocolExceptionFromOsError(e)
 		}
-		return name, typeId, seqId, nil
+		return name, typeID, seqID, nil
 	}
 	if p._StrictRead {
-		return name, typeId, seqId, NewTProtocolException(BAD_VERSION, "Missing version in ReadMessageBegin")
+		return name, typeID, seqID, NewTProtocolException(BAD_VERSION, "Missing version in ReadMessageBegin")
 	}
 	name, e2 := p.readStringBody(int(size))
 	if e2 != nil {
-		return name, typeId, seqId, e2
+		return name, typeID, seqID, e2
 	}
 	b, e3 := p.ReadByte()
 	if e3 != nil {
-		return name, typeId, seqId, e3
+		return name, typeID, seqID, e3
 	}
-	typeId = TMessageType(b)
-	seqId, e4 := p.ReadI32()
+	typeID = TMessageType(b)
+	seqID, e4 := p.ReadI32()
 	if e4 != nil {
-		return name, typeId, seqId, e4
+		return name, typeID, seqID, e4
 	}
-	return name, typeId, seqId, nil
+	return name, typeID, seqID, nil
 }
 
 func (p *TBinaryProtocol) ReadMessageEnd() TProtocolException {
@@ -274,16 +260,16 @@ func (p *TBinaryProtocol) ReadStructEnd() TProtocolException {
 	return nil
 }
 
-func (p *TBinaryProtocol) ReadFieldBegin() (name string, typeId TType, seqId int16, err TProtocolException) {
+func (p *TBinaryProtocol) ReadFieldBegin() (name string, typeID TType, seqID int16, err TProtocolException) {
 	t, err := p.ReadByte()
-	typeId = TType(t)
+	typeID = TType(t)
 	if err != nil {
-		return name, typeId, seqId, err
+		return name, typeID, seqID, err
 	}
 	if t != STOP {
-		seqId, err = p.ReadI16()
+		seqID, err = p.ReadI16()
 	}
-	return name, typeId, seqId, err
+	return name, typeID, seqID, err
 }
 
 func (p *TBinaryProtocol) ReadFieldEnd() TProtocolException {

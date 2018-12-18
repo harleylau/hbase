@@ -172,6 +172,7 @@ func (p *TSocket) Read(buf []byte) (int, error) {
 	return n, NewTTransportExceptionFromOsError(err)
 }
 
+// ReadAll buf
 func (p *TSocket) ReadAll(buf []byte) (int, error) {
 	return ReadAllTransport(p, buf)
 }

@@ -50,12 +50,14 @@ func init() {
 	EMPTY_MESSAGE = NewTMessageDefault()
 }
 
+// TMessageType TMessageType
 type TMessageType int32
 
+// TMessageType
 const (
-	INVALID_TMESSAGE_TYPE TMessageType = 0
-	CALL                  TMessageType = 1
-	REPLY                 TMessageType = 2
-	EXCEPTION             TMessageType = 3
-	ONEWAY                TMessageType = 4
+	INVALID   TMessageType = 0
+	CALL      TMessageType = 1
+	REPLY     TMessageType = 2
+	EXCEPTION TMessageType = 3
+	ONEWAY    TMessageType = 4
 )

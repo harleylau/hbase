@@ -23,12 +23,10 @@ const (
 	TSocket = iota
 )
 
-func newProtocolFactory(protocol int) (thrift.TProtocolFactory, error) {
+func newProtocolFactory(protocol int, trans thrift.TTransport) (thrift.TProtocolFactory, error) {
 	switch protocol {
 	case TBinaryProtocol:
-		return thrift.NewTBinaryProtocolFactoryDefault(), nil
-	case TCompactProtocol:
-		return thrift.NewTCompactProtocolFactory(), nil
+		return thrift.NewTBinaryProtocol(trans, false, true), nil
 	}
 	return nil, errors.New(fmt.Sprint("invalid protocol:", protocol))
 }

@@ -34,7 +34,7 @@ func newClient(addr string, protocol int, trans thrift.TTransport) (*HClient, er
 		Protocol: protocol,
 		Trans:    trans,
 	}
-	protocolFactory, err := newProtocolFactory(protocol)
+	protocolFactory, err := newProtocolFactory(protocol, trans)
 	if err != nil {
 		return client, err
 	}
