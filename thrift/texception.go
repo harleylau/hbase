@@ -3,6 +3,7 @@ package thrift
 import (
 	"encoding/base64"
 	"errors"
+	"io"
 )
 
 /**
@@ -293,4 +294,60 @@ func NewTProtocolExceptionFromTransportException(e TTransportException) TProtoco
 		return t
 	}
 	return NewTProtocolExceptionDefaultString(e.Error())
+}
+
+type TTransportException interface {
+	TException
+	TypeID() int
+}
+
+const (
+	UNKNOWN_TRANSPORT_EXCEPTION = 0
+	NOT_OPEN                    = 1
+	ALREADY_OPEN                = 2
+	TIMED_OUT                   = 3
+	END_OF_FILE                 = 4
+)
+
+type tTransportException struct {
+	typeId  int
+	message string
+}
+
+func (p *tTransportException) TypeID() int {
+	return p.typeId
+}
+
+func (p *tTransportException) Error() string {
+	return p.message
+}
+
+func NewTTransportExceptionDefault() TTransportException {
+	return NewTTransportExceptionDefaultType(UNKNOWN_TRANSPORT_EXCEPTION)
+}
+
+func NewTTransportExceptionDefaultType(t int) TTransportException {
+	return NewTTransportException(t, "")
+}
+
+func NewTTransportExceptionDefaultString(m string) TTransportException {
+	return NewTTransportException(UNKNOWN_TRANSPORT_EXCEPTION, m)
+}
+
+func NewTTransportException(t int, m string) TTransportException {
+	return &tTransportException{typeId: t, message: m}
+}
+
+func NewTTransportExceptionFromOsError(e error) TTransportException {
+	if e == nil {
+		return nil
+	}
+	t, ok := e.(TTransportException)
+	if ok {
+		return t
+	}
+	if e == io.EOF {
+		return NewTTransportException(END_OF_FILE, e.Error())
+	}
+	return NewTTransportExceptionDefaultString(e.Error())
 }

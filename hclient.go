@@ -7,14 +7,17 @@ import (
 	"github.com/J-J-J/hbase/thrift"
 )
 
+const (
+	stateDefault = iota // default close
+	stateOpen           // open
+)
+
 // HClient is a wrap of hbase client
 type HClient struct {
-	addr            string
-	Protocol        int
-	state           int
-	Trans           thrift.TTransport
-	ProtocolFactory thrift.TProtocolFactory
-	hbase           *Hbase.HbaseClient
+	addr  string
+	state int
+	Trans thrift.TTransport
+	hbase *Hbase.HbaseClient
 }
 
 // NewTCPClient return a base tcp client instance
@@ -24,24 +27,13 @@ func NewTCPClient(rawaddr string, buffered bool) (client *HClient, err error) {
 		return
 	}
 	trans := thrift.NewTSocketAddr(tcpAddr)
-	return newClient(tcpAddr.String(), TBinaryProtocol, trans)
-}
-
-// newClient create a new hbase client
-func newClient(addr string, protocol int, trans thrift.TTransport) (*HClient, error) {
-	client := &HClient{
-		addr:     addr,
-		Protocol: protocol,
-		Trans:    trans,
+	client = &HClient{
+		addr:  tcpAddr.String(),
+		Trans: trans,
 	}
-	protocolFactory, err := newProtocolFactory(protocol, trans)
-	if err != nil {
-		return client, err
-	}
-	client.ProtocolFactory = protocolFactory
-	client.hbase = Hbase.NewHbaseClientFactory(trans, protocolFactory)
-
-	return client, nil
+	protocol := thrift.NewTBinaryProtocol(trans, false, true)
+	client.hbase = Hbase.NewHbaseClientFactory(trans, protocol)
+	return
 }
 
 // Open connection

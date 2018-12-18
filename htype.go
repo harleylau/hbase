@@ -5,7 +5,6 @@ import (
 )
 
 //type Text []byte
-
 func textListToStr(list []Hbase.Text) []string {
 	if list == nil {
 		return nil

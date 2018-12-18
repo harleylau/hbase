@@ -6,32 +6,15 @@ import (
 	"time"
 )
 
-/**
- * Socket implementation of the TTransport interface. To be commented soon!
- *
- */
+// TSocket implementation of the TTransport interface. To be commented soon!
 type TSocket struct {
 	writeBuffer *bytes.Buffer
-	/**
-	 * Wrapped Socket object
-	 */
-	conn net.Conn
-	/**
-	 * Remote Addr
-	 */
-	addr net.Addr
-	/**
-	 * Socket timeout in nanoseconds
-	 */
+	conn        net.Conn
+	addr        net.Addr
 	nsecTimeout int64
 }
 
-/**
- * Constructor that takes an already created socket.
- *
- * @param socket Already created socket object
- * @throws TTransportException if there is an error setting up the streams
- */
+// NewTSocketConn Constructor that takes an already created socket.
 func NewTSocketConn(connection net.Conn) (*TSocket, TTransportException) {
 	return NewTSocketConnTimeout(connection, 0)
 }
@@ -135,12 +118,10 @@ func (p *TSocket) Open() error {
 	var err error
 	if p.nsecTimeout > 0 {
 		if p.conn, err = net.DialTimeout(p.addr.Network(), p.addr.String(), time.Duration(p.nsecTimeout)); err != nil {
-			LOGGER.Print("Could not open socket", err.Error())
 			return NewTTransportException(NOT_OPEN, err.Error())
 		}
 	} else {
 		if p.conn, err = net.Dial(p.addr.Network(), p.addr.String()); err != nil {
-			LOGGER.Print("Could not open socket", err.Error())
 			return NewTTransportException(NOT_OPEN, err.Error())
 		}
 	}
@@ -155,7 +136,6 @@ func (p *TSocket) Close() error {
 	if p.conn != nil {
 		err := p.conn.Close()
 		if err != nil {
-			LOGGER.Print("Could not close socket. ", err.Error())
 			return err
 		}
 		p.conn = nil
